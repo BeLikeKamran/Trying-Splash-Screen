@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kamran/PDF/PDF.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key key}) : super(key: key);
@@ -11,6 +12,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (builder) => PDF()));
+        },
+      ),
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
